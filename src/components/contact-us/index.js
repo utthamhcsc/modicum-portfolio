@@ -30,7 +30,7 @@ function ContactUs() {
           <Container maxWidth="md" className={classes.root}>    
         <Grid container spacing={1}>
           <Grid item xs={12} sm={5}>
-              <Typography variant='h4' variantMapping='h1' style={{marginBottom:'30px'}}>{content.title1}</Typography>
+              <Typography variant='h4'  style={{marginBottom:'30px'}}>{content.title1}</Typography>
               <Typography variant='subtitle2' color='textSecondary'>{content.title2}</Typography>
         </Grid>
         <Grid item xs={12} sm={7}>

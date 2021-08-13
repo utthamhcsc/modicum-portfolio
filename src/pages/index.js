@@ -21,7 +21,7 @@ const routes=[{
 function Index() {
     return (
         <Suspense fallback={<h1>Loading....</h1>}>
-        {routes.map(route=><Route {...route}/>)}
+        {routes.map((route,index)=><Route key={'route'+index} {...route}/>)}
         </Suspense>
     )
 }

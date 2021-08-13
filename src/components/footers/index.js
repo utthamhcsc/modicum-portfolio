@@ -57,7 +57,7 @@ const support={
     <Container maxWidth='lg'>
       <Grid container spacing={4}>
       <Grid item xs={12} sm={4} >
-        <Box component='img' src='assets/logos/logo.png' width='120px' height='50px' objectFit='contain'/>
+        <Box component='img' src='assets/logos/logo.png' width='120px' height='50px' objectfit='contain'/>
           <Box bgcolor='white' maxWidth='300px' my='20px'>
             <TextField
             fullWidth
@@ -73,11 +73,11 @@ const support={
       </Grid>
       <Grid item xs={12} sm={3}>
         <Typography variant='h5' style={{paddingBottom:'24px',paddingTop:'10px'}}>{service.title}</Typography>
-        {service.links.map(item=><Box display='block' component='small' style={{lineHeight:'24px'}}>{item}</Box>)}
+        {service.links.map(item=><Box key={item} display='block' component='small' style={{lineHeight:'24px'}}>{item}</Box>)}
       </Grid>
       <Grid item xs={12} sm={2}>
       <Typography variant='h5' style={{paddingBottom:'24px',paddingTop:'10px'}}>{support.title}</Typography>
-        {support.links.map(item=><Box display='block' component='small' style={{lineHeight:'24px'}}>{item}</Box>)}
+        {support.links.map(item=><Box key={item} display='block' component='small' style={{lineHeight:'24px'}}>{item}</Box>)}
      
       </Grid>
       <Grid item xs={12} sm={3}>
@@ -122,7 +122,7 @@ const Footer2 = () => {
             </Box>
         </Box>
         </Grid>
-        <Grid item xs={12} sm={4} alignContent='center' >
+        <Grid item xs={12} sm={4}  >
         <Box display='flex' marginTop='10px'  justifyContent='center' alignItems='center'>
         
           <Box display='grid' style={{placeItems:'center'}} height='40px' width='40px' bgcolor='white' borderRadius='50%' marginRight='15px'>

@@ -112,19 +112,19 @@ export default function Navigation(props) {
     <AppBar position="sticky" color="inherit">
         <Container maxWidth='lg'>
       <Toolbar className={classes.toolbar} variant='dense'>
-        <Link href="#" color="primary" underline="none" variant="h5" className={classes.brand}>
+        <Link to="#" color="primary" underline="none" variant="h5" className={classes.brand}>
           {brand}
         </Link>
-        <Link href="#" color="textPrimary" variant="body2" className={classes.link}>
+        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
           {content['link1']}
         </Link>
-        <Link href="#" color="textPrimary" variant="body2" className={classes.link}>
+        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
           {content['link2']}
         </Link>
-        <Link href="#" color="textPrimary" variant="body2" className={classes.link}>
+        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
           {content['link3']}
         </Link>
-        <Link href="#" color="textPrimary" variant="body2" className={classes.link}>
+        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
           {content['link4']}
         </Link>
         <Button size='small' variant="contained" color="primary" className={classes.primaryAction}>{content['primary-action']}</Button>
@@ -136,7 +136,7 @@ export default function Navigation(props) {
       <Drawer anchor="left" open={state.open} onClose={toggleDrawer(false)}>
         <div className={classes.drawerContainer}>
           <Box mb={1} ml={2} pb={2} border={1} borderTop={0} borderLeft={0} borderRight={0} borderColor="background.emphasis">
-            <Link href="#" color="primary" underline="none" variant="h5" className={classes.linkBrand}>
+            <Link to="#" color="primary" underline="none" variant="h5" className={classes.linkBrand}>
               {brand}
             </Link>
           </Box>

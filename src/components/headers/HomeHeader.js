@@ -67,7 +67,7 @@ export default function Header(props) {
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
           <Typography variant="h2" component="h2" gutterBottom={true}>
-            <Typography color="" variant="h2" component="span">{content['header-p1']} </Typography>
+            <Typography  variant="h2" component="span">{content['header-p1']} </Typography>
             <Typography variant="h2" component="span">{content['header-p2']}</Typography>
           </Typography>
           <Container maxWidth="sm">

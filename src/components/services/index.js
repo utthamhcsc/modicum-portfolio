@@ -17,7 +17,7 @@ function Index() {
           
           </Grid>
 
-          {Array(6).fill(0).map((item,index)=><Grid id={item+index} item xs={12} md={4}>
+          {Array(6).fill(0).map((item,index)=><Grid key={item+index} item xs={12} md={4}>
           <ServiceCard/>
           </Grid>
               
