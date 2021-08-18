@@ -13,16 +13,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment:'fixed',
     mixBlendMode:'darken',
     position:'relative',
-    
+   
     backgroundColor: 'rgba(0,0,0,.8)',
     paddingTop: theme.spacing(12),
     paddingBottom: theme.spacing(12),
     [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing(18),
-      paddingBottom: theme.spacing(18),
+      paddingTop: theme.spacing(22),
+      paddingBottom: theme.spacing(22),
     },
-    // border:'5px solid '+theme.palette.primary.dark,
-    // borderTop:0,
+   // border:'5px solid '+theme.palette.primary.dark,
+    borderTop:0,
     // borderBottomWidth:'10px',
     // borderBottomLeftRadius:'28%',
     // borderBottomRightRadius:'28%',
@@ -59,7 +59,7 @@ export default function Header(props) {
   const classes = useStyles();
 
   const content = {
-    'header-p1': 'Would you like to start a project with us?',
+    'header-p1': 'Our Service',
     'header-p2': '',
     'description': 'Modicum is focusing exclusively in high quality and cost-effective software development and implementation services.',
     'primary-action': 'Action',
@@ -79,10 +79,10 @@ export default function Header(props) {
           <Container maxWidth="sm">
             <Typography variant="subtitle1" color="textSecondary" paragraph={true} className={classes.description}>{content['description']}</Typography>
           </Container>
-          <Box mt={3}>
+          {/* <Box mt={3}>
             <Button variant="contained" color="secondary" className={classes.primaryAction}>{content['primary-action']}</Button>
             <Button variant="outlined" color="secondary" className={classes.secondaryAction}>{content['secondary-action']}</Button>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </section>

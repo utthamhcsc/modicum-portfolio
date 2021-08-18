@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import { Fab, makeStyles, TextField, Typography } from '@material-ui/core'
+import { Box, Fab, makeStyles, TextField, Typography } from '@material-ui/core'
 const useStyles=makeStyles(theme=>({
     root:{
         padding:'40px 0px'
@@ -26,12 +26,12 @@ function ContactUs() {
         title2:`${'Modicum is focusing exclusively in high quality and cost-effective software development and implementation services.'}`
     }
     return (
-        
+        <Box id='contactus' pt={2}>
           <Container maxWidth="md" className={classes.root}>    
         <Grid container spacing={1}>
           <Grid item xs={12} sm={5}>
               <Typography variant='h4'  style={{marginBottom:'30px'}}>{content.title1}</Typography>
-              <Typography variant='subtitle2' color='textSecondary'>{content.title2}</Typography>
+              <Typography variant='subtitle2'  color='textSecondary'>{content.title2}</Typography>
         </Grid>
         <Grid item xs={12} sm={7}>
            <form className={classes.contact}> 
@@ -42,7 +42,8 @@ function ContactUs() {
           </form>
         </Grid>
         </Grid>
-        </Container>  
+        </Container> 
+        </Box> 
     )
 }
 

@@ -12,7 +12,7 @@ function Index() {
                 <Box component='h1' textAlign='center'>
                 Why Choose Us
                 </Box>
-                <Box component='h3' textAlign='center'>
+                <Box component='h4' color='gray' textAlign='center'>
                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
                 </Box>
           

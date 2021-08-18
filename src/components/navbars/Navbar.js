@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -48,9 +48,16 @@ position:'relative',
   right:0,
   borderBottom:'2px solid '+theme.palette.primary.light, 
 },
+
     marginRight: theme.spacing(5),
     [theme.breakpoints.down('sm')]: {
       display: 'none'
+    }
+  },
+  activeClassName:{
+    '&:hover:after':{
+      right:0,
+      borderBottom:'2px solid '+theme.palette.primary.light, 
     }
   },
   primaryAction: {
@@ -112,22 +119,22 @@ export default function Navigation(props) {
     <AppBar position="sticky" color="inherit">
         <Container maxWidth='lg'>
       <Toolbar className={classes.toolbar} variant='dense'>
-        <Link to="#" color="primary" underline="none" variant="h5" className={classes.brand}>
+        <NavLink to="/" color="primary" underline="none" variant="h5" className={classes.brand}>
           {brand}
-        </Link>
-        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
+        </NavLink>
+        <NavLink component={'a'} to="/#home" color="textPrimary" variant="body2" className={classes.link}>
           {content['link1']}
-        </Link>
-        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
+        </NavLink>
+        <NavLink component={'a'} to="/#aboutus" color="textPrimary" variant="body2" className={classes.link}>
           {content['link2']}
-        </Link>
-        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
+        </NavLink>
+        <NavLink to="/services"  color="textPrimary" variant="body2" className={classes.link}>
           {content['link3']}
-        </Link>
-        <Link to="#" color="textPrimary" variant="body2" className={classes.link}>
+        </NavLink>
+        <NavLink to="/projects"  color="textPrimary" variant="body2" className={classes.link}>
           {content['link4']}
-        </Link>
-        <Button size='small' variant="contained" color="primary" className={classes.primaryAction}>{content['primary-action']}</Button>
+        </NavLink>
+        <Button component='a' href='#contactus' size='small' variant="contained" color="primary" className={classes.primaryAction}>{content['primary-action']}</Button>
         <IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton} onClick={toggleDrawer(true)}>
           <MenuIcon />
         </IconButton>

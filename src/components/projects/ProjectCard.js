@@ -1,6 +1,7 @@
 import React from 'react'
 import CardMedia from '@material-ui/core/CardMedia'
 import { Box, Card, CardActionArea, CardActions, CardContent, makeStyles, Typography } from '@material-ui/core'
+import { useHistory } from 'react-router-dom';
 const useStyles=makeStyles(theme=>({
     root:{position:'relative',overflow:'hidden',
 '&:hover #details':{bottom:0,zIndex:99}
@@ -12,17 +13,24 @@ const useStyles=makeStyles(theme=>({
         backgroundColor:"lightgray",
         position:'absolute ',
         bottom:'110%',
+        left:0,
+        right:0,
         zIndex:'-99 ',
     }
 
 
 }))
-function ServiceCard() {
+function ProjectCard() {
+    const history=useHistory();
     const classes=useStyles();
+    const goToProjectPage=()=>history.push('/projects')
     return (
-        <Box position='relative' className={classes.root}>
-        <Card style={{minHeight:'300px',padding:0}}>
-            
+        <Box position='relative' className={classes.root} >
+        <Card style={{minHeight:'300px',padding:0,margin:'0 auto',
+            maxWidth:'300px'}}
+        
+       >
+        <CardActionArea onClick={goToProjectPage}>    
         <CardContent
           
           style={{
@@ -32,15 +40,15 @@ function ServiceCard() {
               objectfit:'contain',
               backgroundSize:'cover'}}
         />
-        <CardActions style={{justifyContent:'center'}} id="details" className={classes.details}>
+        <CardActions style={{justifyContent:'center',width:'100%'}} id="details" className={classes.details}>
             <Box component='h2' p={0} m={0} >
                 Project
             </Box>
             </CardActions>
-        
+        </CardActionArea>
         </Card>
         </Box>
     )
 }
 
-export default ServiceCard
+export default ProjectCard

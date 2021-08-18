@@ -6,7 +6,8 @@ import { Box, Container, Typography } from '@material-ui/core'
 function Index() {
 
     return (
-        <Container maxWidth='lg'>
+      <section id='aboutus'>
+        <Container maxWidth='lg' >
         <Grid container spacing={1} alignItems='stretch'>
             <Grid
               item
@@ -25,12 +26,13 @@ function Index() {
               <Box
               width='80%'
               margin='0 auto'
-              minHeight='500px'
+              height='100%'
+              minHeight='200px'
               borderRadius='20px'
-              style={{backgroundImage:'url("assets/img/home.jpg")',
+              style={{backgroundImage:'url("assets/img/about.jpg")',
               backgroundPosition:'center center',
               objectfit:'contain',
-              backgroundAttachment:'fixed',
+              boxShadow:'2px 3px 7px rgba(0,0,0,.7)',
               backgroundSize:'cover'}}
               
               />  
@@ -43,7 +45,7 @@ function Index() {
               <Box
               width='80%'
               margin='0 auto'
-              minHeight='500px'
+             
               >
                   <Box textAlign='center' my='20px' fontSize='20px' component={Typography} variant="h2">
                       About Us
@@ -69,6 +71,7 @@ software development and implementation services.
             </Grid>
         </Grid>
         </Container>
+        </section>
     )
 }
 

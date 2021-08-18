@@ -5,13 +5,13 @@ import ProjectCard from './ProjectCard'
 
 function Index() {
     return (
-        <Box maxWidth='90%' margin='0 auto'>
+        <Box id='portfolio' maxWidth='90%' margin='0 auto' >
         <Grid container spacing={4}>
             <Grid item xs={12}>
-                <Box component='h1' textAlign='center'>
+                <Box component='h1' textAlign='center' pt={2}>
                     Projects
                 </Box>
-                <Box component='h3' textAlign='center' px={4}>
+                <Box component='h4' color='gray' textAlign='center' px={4}>
                 The development team of Modicum is equipped with proper human resources specialized in different system development tasks.
                 </Box>
           
