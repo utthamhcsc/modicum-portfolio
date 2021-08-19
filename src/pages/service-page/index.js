@@ -7,6 +7,8 @@ import AboutUs from '../../components/about-us'
 import Service from '../../components/services'
 import Projects from '../../components/projects'
 import ChooseUs from '../../components/choose-us'
+import Technologis from '../../components/services/Technologis'
+import ServicesTimeLine from '../../components/services/ServicesTimeLine'
 function index() {
     return (
         <div>
@@ -14,10 +16,12 @@ function index() {
             <Navbar/>
             {/* Header Section */}
              <ServiceHeader/> 
+             <Technologis/>
+             <ServicesTimeLine/>
             {/* About Us Section */}
             {/* <AboutUs/> */}
             {/* Service Section */}
-            <Service/>
+            {/* <Service/> */}
             {/* projects */}
             {/* <Projects/> */}
             {/* why chose us */}

@@ -3,17 +3,20 @@ import {Box, Card, CardActionArea, CardActions, CardContent, makeStyles, Typogra
 import { useHistory } from 'react-router-dom';
 const useStyles=makeStyles(theme=>({
     root:{position:'relative',overflow:'hidden',
-'&:hover #details':{top:0,left:0,right:0,zIndex:99,display:'block'}
+'&:hover #details':{top:0,left:0,right:0,bottom:'16px',zIndex:99}
 },
 
     details:{
-        display:'none',
+       
         width:'100%',
-        height:'100%',
-        transition:theme.transitions.easing.easeInOut,
-        backgroundColor:"lightgray",
+      
+        transition:'top .3s ease-in',
+        backgroundColor:"rgba(0,0,0,.9)",
         position:'absolute ',
         top:'110%',
+        left:0,
+        bottom:'16px',
+        right:0,
         zIndex:'-99 ',
     }
 
@@ -25,8 +28,8 @@ function ServiceCard() {
     const goToServicePage=()=>history.push('/services')
     return (
         <Box position='relative' pb={2} className={classes.root} >
-        <Card style={{
-            
+        <Card elevation={0}  style={{
+           
              margin:'0 auto',
              maxWidth:'300px'}}>
             
@@ -40,7 +43,7 @@ function ServiceCard() {
               objectfit:'contain',
               backgroundSize:'cover'}}
         />
-        <CardActions style={{justifyContent:'center'}}>
+        <CardActions style={{justifyContent:'center', border:'1px solid rgba(1,1,1,.7)',}}>
             <Box component='h2' p={0} m={0} textAlign='center'>
                 Service
             </Box>
@@ -48,9 +51,10 @@ function ServiceCard() {
         
         </Card>
         <Card id="details" className={classes.details} style={{
+            
              margin:'0 auto',
              maxWidth:'300px'}}>
-            <CardActionArea style={{height:'100%'}} onClick={goToServicePage}>
+            <CardActionArea  onClick={goToServicePage}>
         <CardContent>
             <Typography paragraph variant='h2'>Details</Typography>
             <Typography paragraph>Details</Typography>

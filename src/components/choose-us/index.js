@@ -10,7 +10,7 @@ function Index() {
         <Grid container spacing={4} alignItems='stretch' justifyContent='center'>
             <Grid item xs={12}>
                 <Box component='h1' textAlign='center'>
-                Why Choose Us
+                Why Choose Us...!
                 </Box>
                 <Box component='h4' color='gray' textAlign='center'>
                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
@@ -21,8 +21,11 @@ function Index() {
             <Box
             height='100%'
             minHeight='200px'
-                style={{backgroundImage:'url("assets/img/home.jpg")'}}
-            />
+            style={{backgroundImage:'url("assets/img/about.jpg")',
+            backgroundPosition:'center center',
+            objectfit:'contain',
+            boxShadow:'2px 3px 7px rgba(0,0,0,.7)',
+            backgroundSize:'cover'}}/>
           </Grid>
           <Grid item container xs={12} sm={9} spacing={4} justifyContent='center' alignItems='stretch'>
           <Grid item xs={12} sm={6}>

@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(0,0,0,.8)',
     paddingTop: theme.spacing(12),
     paddingBottom: theme.spacing(12),
+    clipPath: 'ellipse(90% 90% at 50% 10%)',
     [theme.breakpoints.up('md')]: {
       paddingTop: theme.spacing(22),
       paddingBottom: theme.spacing(22),

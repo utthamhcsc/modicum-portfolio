@@ -7,6 +7,7 @@ import AboutUs from '../../components/about-us'
 import Service from '../../components/services'
 import Projects from '../../components/projects'
 import ChooseUs from '../../components/choose-us'
+import PortFolio from '../../components/projects/PortFolio'
 function index() {
     return (
         <div>
@@ -14,12 +15,13 @@ function index() {
             <Navbar/>
             {/* Header Section */}
              <PortfolioHeader/> 
+             <PortFolio/>
             {/* About Us Section */}
             {/* <AboutUs/> */}
             {/* Service Section */}
             {/* <Service/> */}
             {/* projects */}
-            <Projects/>
+            {/* <Projects/> */}
             {/* why chose us */}
             {/* <ChooseUs/> */}
             {/* 6D process */}

@@ -9,10 +9,10 @@ const useStyles=makeStyles(theme=>({
 
     details:{
         width:'100%',
-        transition:'all 4sec ease-in-out !important',
+        transition:'bottom .3s ease-in-out !important',
         backgroundColor:"lightgray",
         position:'absolute ',
-        bottom:'110%',
+        bottom:'-10%',
         left:0,
         right:0,
         zIndex:'-99 ',
@@ -26,8 +26,8 @@ function ProjectCard() {
     const goToProjectPage=()=>history.push('/projects')
     return (
         <Box position='relative' className={classes.root} >
-        <Card style={{minHeight:'300px',padding:0,margin:'0 auto',
-            maxWidth:'300px'}}
+        <Card  elevation={0} style={{minHeight:'300px',padding:0,margin:'0 auto',
+            maxWidth:'300px',filter:'brightness(.2)'}}
         
        >
         <CardActionArea onClick={goToProjectPage}>    

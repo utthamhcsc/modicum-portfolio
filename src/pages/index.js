@@ -22,7 +22,7 @@ const routes=[{
 ]
 function Index() {
     return (
-        <Box bgcolor='whitesmoke'>
+        <Box>
         <Suspense fallback={<h1></h1>}>
         {routes.map((route,index)=><Route key={'route'+index} {...route}/>)}
         </Suspense>

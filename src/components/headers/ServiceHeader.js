@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
    // border:'5px solid '+theme.palette.primary.dark,
     borderTop:0,
+    clipPath: 'ellipse(90% 90% at 50% 10%)',
     // borderBottomWidth:'10px',
     // borderBottomLeftRadius:'28%',
     // borderBottomRightRadius:'28%',

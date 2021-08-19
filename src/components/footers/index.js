@@ -107,8 +107,8 @@ const Footer2 = () => {
           <PhoneIcon color='disabled'/>
           </Box>
           <Box >
-            <Typography variant='h6'>Contact Us</Typography>
-            <Typography variant='subtitle1'>+91-8861129756</Typography>
+            <Typography variant='body2'>Contact Us</Typography>
+            <Typography variant='caption'>+91-8861129756</Typography>
             </Box>
         </Box>
         </Grid>
@@ -117,8 +117,8 @@ const Footer2 = () => {
         
           <Box height='40px' width='40px' bgcolor='white' borderRadius='50%' marginRight='15px' display='grid' style={{placeItems:'center'}}><MailIcon color='disabled'/></Box>
           <Box >
-            <Typography variant='h6'>Email</Typography>
-            <Typography variant='subtitle1'>info@modicumtechnogies.com</Typography>
+            <Typography variant='body2'>Email</Typography>
+            <Typography variant='caption'>info@modicumtechnogies.com</Typography>
             </Box>
         </Box>
         </Grid>
@@ -129,8 +129,8 @@ const Footer2 = () => {
           <RoomIcon color='disabled'/>
           </Box>
           <Box>
-            <Typography variant='h6'>Address</Typography>
-            <Typography variant='subtitle1'>#363, 19th Main Road,<br/>
+            <Typography variant='body2'>Address</Typography>
+            <Typography variant='caption'>#363, 19th Main Road,<br/>
 1st Block, Rajajinagar Bangalore - 560010</Typography>
             </Box>
         </Box>
