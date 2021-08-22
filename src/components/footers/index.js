@@ -17,7 +17,7 @@ import {
   IconButton,
   makeStyles,
   Toolbar,
-  Typography, TextField
+  Typography, TextField, Button
 } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   
@@ -63,12 +63,12 @@ const support={
             fullWidth
             placeholder='Email Here'
              variant='outlined'
-              InputProps={{endAdornment:<MailOutlineIcon/>}}
+              InputProps={{endAdornment:<MailOutlineIcon color='inherit'/>}}
             />
           </Box>
           <Box display='flex' my={2}>
-            <Box py={1} px={2} mx={2} bgcolor='lightGray'>whatsapp</Box>
-            <Box py={1} px={2} bgcolor='lightGray'>+91-8861129756</Box>
+            <Button variant='contained' style={{marginRight:'20px'}} component='a' target='_blank' href='https://api.whatsapp.com/send?phone=8861129756&text=Hi%20There%20Please%20Ping%20us%20for%20more%20information!!'  >whatsapp</Button>
+            <Button variant='contained'>+91-8861129756</Button>
           </Box>
       </Grid>
       <Grid item xs={12} sm={3}>
@@ -99,9 +99,9 @@ const Footer2 = () => {
   return (
     <AppBar position="relative">
       <Container maxWidth='lg'>
-        <Grid container justifyContent='space-around'>
+        <Grid container >
           <Grid item xs={12} sm={4} >
-        <Box display='flex' marginTop='10px'  justifyContent='center' alignItems='center'>
+        <Box display='flex' width='100%' marginTop='10px'  justifyContent='flex-start' alignItems='center'>
         
           <Box display='grid' style={{placeItems:'center'}} height='40px' width='40px' bgcolor='white' borderRadius='50%' marginRight='15px'>
           <PhoneIcon color='disabled'/>
@@ -113,7 +113,7 @@ const Footer2 = () => {
         </Box>
         </Grid>
         <Grid  item xs={12} sm={4} >
-        <Box display='flex' marginTop='10px' justifyContent='center' alignItems='center'>
+        <Box display='flex' marginTop='10px'  alignItems='center'>
         
           <Box height='40px' width='40px' bgcolor='white' borderRadius='50%' marginRight='15px' display='grid' style={{placeItems:'center'}}><MailIcon color='disabled'/></Box>
           <Box >
@@ -123,7 +123,7 @@ const Footer2 = () => {
         </Box>
         </Grid>
         <Grid item xs={12} sm={4}  >
-        <Box display='flex' marginTop='10px'  justifyContent='center' alignItems='center'>
+        <Box display='flex' marginTop='10px'   alignItems='center'>
         
           <Box display='grid' style={{placeItems:'center'}} height='40px' width='40px' bgcolor='white' borderRadius='50%' marginRight='15px'>
           <RoomIcon color='disabled'/>

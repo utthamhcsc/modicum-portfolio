@@ -26,8 +26,10 @@ function ProjectCard() {
     const goToProjectPage=()=>history.push('/projects')
     return (
         <Box position='relative' className={classes.root} >
-        <Card  elevation={0} style={{minHeight:'300px',padding:0,margin:'0 auto',
-            maxWidth:'300px',filter:'brightness(.2)'}}
+        <Card variant='outlined' style={{minHeight:'300px',
+        objectFit:'cover',
+        padding:0,margin:'0 auto',
+            maxWidth:'300px'}}
         
        >
         <CardActionArea onClick={goToProjectPage}>    

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
@@ -8,7 +8,21 @@ import { TextField, InputAdornment } from '@material-ui/core';
 import {Mail,Person} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
+  animate:{
+    
+
+  
+  //width: '80%',
+  //color: 'rgb(255, 255, 255)',
+  animationFillMode: 'both',
+  animationDuration: '2000ms',
+  animationDelay: '200ms',
+  animationIterationCount: 1,
+  opacity: 1,
+  animationName: 'slide'
+  },
   section: {
+    overflow:'hidden',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundBlendMode:'darken',
@@ -69,6 +83,31 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
+  const heading=[{
+    title1:'We Built Softwares',
+    title2:'Innovative | Top Quality | On Time'
+  },
+  {
+    title1:'  We Deliver Unique Creative Design',
+    title2:' Think | Design | Execute'
+  },
+  {
+    title1:'   We Create Custom Application ',
+    title2:'  Analyze | Code | Develop'
+  }
+]
+
+const [index,setIndex]=useState(0);
+const nextItem=()=>{
+  if(index<heading.length-1){
+    setIndex(index=>index+1)
+  }else{
+    setIndex(0)
+  }
+}
+useEffect(()=>{
+  setTimeout(nextItem,6000)
+},[index])
 
   const content = {
     'header-p1': 'We Deliver Creative Unique Design',
@@ -85,10 +124,10 @@ export default function Header(props) {
     <section id='home' className={classes.section} style={{ backgroundImage: `url("${content['pattern']}")` }}>
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
-          <Typography variant="h2" component="h2" gutterBottom={true}>
-            <Typography  variant="h2" component="span">{content['header-p1']} </Typography>
-            
-          </Typography>
+          <Typography key={heading[index]?.title1}  className={classes.animate} variant="h2" component="h2" gutterBottom={true}>
+            <Typography  variant="h2" component="p">{heading[index]?.title1} </Typography>
+            <Typography  variant="h2" component="p">{heading[index]?.title2} </Typography>
+       </Typography>
           <Box my={6}/>
           <Container maxWidth="md">
           

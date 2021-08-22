@@ -24,11 +24,11 @@ const useStyles=makeStyles(theme=>({
 function ChooseCard({title,details}) {
     const classes=useStyles();
     return (
-        <Card className={classes.root} style={{height:'100%'}}>
+        <Card variant='outlined' className={classes.root} style={{height:'100%'}}>
             <CardContent style={{textAlign:'center'}}>
                 <IconButton className='iconbtn' color='inherit'  ><Person style={{fontSize:"50px"}}/></IconButton>
-                <Box component='h3' mt={0} textAlign='center'>{title}</Box>
-                <Typography variant='body' color='textSecondary'>{details}</Typography>
+                <Box component='h4' mt={0} textAlign='center'>{title}</Box>
+                <Typography style={{textAlign:'justify !important'}} variant='body' color='textSecondary'>{details}</Typography>
             </CardContent>
         </Card>
     )

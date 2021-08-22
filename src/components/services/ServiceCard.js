@@ -22,13 +22,13 @@ const useStyles=makeStyles(theme=>({
 
 
 }))
-function ServiceCard() {
+function ServiceCard({title,details}) {
     const history=useHistory();
     const classes=useStyles();
     const goToServicePage=()=>history.push('/services')
     return (
         <Box position='relative' pb={2} className={classes.root} >
-        <Card elevation={0}  style={{
+        <Card variant='outlined'  style={{
            
              margin:'0 auto',
              maxWidth:'300px'}}>
@@ -43,9 +43,9 @@ function ServiceCard() {
               objectfit:'contain',
               backgroundSize:'cover'}}
         />
-        <CardActions style={{justifyContent:'center', border:'1px solid rgba(1,1,1,.7)',}}>
-            <Box component='h2' p={0} m={0} textAlign='center'>
-                Service
+        <CardActions style={{justifyContent:'center'}}>
+            <Box  p={0} m={0} textAlign='center'>
+                <b>{title}</b>
             </Box>
             </CardActions>
         
@@ -56,8 +56,8 @@ function ServiceCard() {
              maxWidth:'300px'}}>
             <CardActionArea  onClick={goToServicePage}>
         <CardContent>
-            <Typography paragraph variant='h2'>Details</Typography>
-            <Typography paragraph>Details</Typography>
+            <Typography color='secondary' paragraph  variant='h6'>{title}</Typography>
+            <Typography color='secondary' >{details}</Typography>
         </CardContent>
         
         </CardActionArea>

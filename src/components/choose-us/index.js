@@ -6,7 +6,7 @@ import ChooseCard from './ChooseCard'
 
 function Index() {
     return (
-        <Box maxWidth='90%' margin='0 auto'>
+        <Box maxWidth='85%' margin='0 auto'>
         <Grid container spacing={4} alignItems='stretch' justifyContent='center'>
             <Grid item xs={12}>
                 <Box component='h1' textAlign='center'>

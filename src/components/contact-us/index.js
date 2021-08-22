@@ -26,14 +26,14 @@ function ContactUs() {
         title2:`${'Modicum is focusing exclusively in high quality and cost-effective software development and implementation services.'}`
     }
     return (
-        <Box id='contactus' pt={2}>
-          <Container maxWidth="md" className={classes.root}>    
-        <Grid container spacing={1}>
-          <Grid item xs={12} sm={5}>
-              <Typography variant='h4'  style={{marginBottom:'30px'}}>{content.title1}</Typography>
-              <Typography variant='subtitle2'  color='textSecondary'>{content.title2}</Typography>
+        <Box maxWidth='90%' margin='0 auto' id='contactus' my={5} pt={2}>
+              
+        <Grid container spacing={3} justifyContent='center'>
+          <Grid item xs={12} sm={6} style={{textAlign:'center'}}>
+              <Typography variant='h4'  paragraph style={{display:'inline-block'}}>{content.title1}</Typography>
+              <Typography variant='subtitle2'  color='textSecondary' style={{display:'inline-block'}}>{content.title2}</Typography>
         </Grid>
-        <Grid item xs={12} sm={7}>
+        <Grid item xs={12} sm={6} >
            <form className={classes.contact}> 
           <TextField label='Full Name' fullWidth size='small'/>
           <TextField label='Email' fullWidth size='small'/>
@@ -42,7 +42,7 @@ function ContactUs() {
           </form>
         </Grid>
         </Grid>
-        </Container> 
+     
         </Box> 
     )
 }

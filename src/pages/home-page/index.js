@@ -7,6 +7,8 @@ import AboutUs from '../../components/about-us'
 import Service from '../../components/services'
 import Projects from '../../components/projects'
 import ChooseUs from '../../components/choose-us'
+import SixDProcess from '../../components/sixD-process'
+import Testimonial from '../../components/testimonials'
 function index() {
     return (
         <div>
@@ -23,7 +25,9 @@ function index() {
             {/* why chose us */}
             <ChooseUs/>
             {/* 6D process */}
+            <SixDProcess/>
             {/* testimonial */}
+            <Testimonial/>
             {/* contact us */}
             <ContactUs/>
             {/* footer */}

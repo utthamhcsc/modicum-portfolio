@@ -13,7 +13,7 @@ function Index() {
               item
               xs={12}
             >
-              <Box textAlign='center' fontSize='35px' py='30px'>
+              <Box textAlign='center'  fontSize='17px' fontWeight='bolder' py='30px'>
               Modicum provides one stop automated solution for your trade and industry. Depending on the size and field of your organization, we have different set of services to meet your requirements.
               </Box>    
             </Grid>
