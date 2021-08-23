@@ -20,7 +20,7 @@ export default function ({classes}) {
                     </Box>
                 </Box>
                 <Box flex='6' className='item text' >
-                    <Box style={{paddingTop:'80px',paddingLeft:'32px'}}>
+                    <Box height='100%' style={{paddingTop:'80px',paddingLeft:'32px'}}>
                         <h2 style={{marginTop:'0'}}>Cloud Data Solutions</h2>
                    <Typography color='textSecondary' style={{textAlign:'justify'}}> 
                    <b style={{textAlign:'center'}}>What is Cloud – based solution..??</b>

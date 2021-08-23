@@ -14,21 +14,21 @@ const useStyles=makeStyles(theme=>({
         display:"grid",
         //gap:'20px',
         gridTemplateColumns:'1fr 1fr',
-        [theme.breakpoints.down('md')]:{
-            justifyContent:'center',
-            gridTemplateColumns:'1fr',
-            '& .radio':{
-                display:'none'
-            },
-            '& .item,& .item>*':{
-                width:'100%',
-                padding:'10px !important',
-                border:'none !important'
-            },
-            '& image':{order:1},
-            '& text':{order:2}
+        // [theme.breakpoints.down('md')]:{
+        //     justifyContent:'center',
+        //     gridTemplateColumns:'1fr',
+        //     '& .radio':{
+        //         display:'none'
+        //     },
+        //     '& .item,& .item>*':{
+        //         width:'100%',
+        //         padding:'10px !important',
+        //         border:'none !important'
+        //     },
+        //     '& image':{order:1},
+        //     '& text':{order:2}
        
-        }
+        // }
 
     },
 

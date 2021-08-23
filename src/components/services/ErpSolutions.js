@@ -21,7 +21,7 @@ export default function ({classes}) {
                     </Box>
                 </Box>
                 <Box flex='6' className='item text' >
-                    <Box style={{paddingTop:'80px',paddingLeft:'32px'}}>
+                    <Box height='100%' style={{paddingTop:'80px',paddingLeft:'32px'}}>
                         <h2 style={{marginTop:'0'}}>ERP Softwares and
 Application Development</h2>
                    <Typography color='textSecondary' style={{textAlign:'justify'}}> 

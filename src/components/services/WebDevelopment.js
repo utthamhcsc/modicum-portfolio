@@ -20,7 +20,7 @@ function WebDevelopment({classes}) {
                     </Box>
                 </Box>
                 <Box  flex='6' className='item text' >
-                    <Box style={{paddingTop:'80px',paddingLeft:'32px'}}>
+                    <Box height='100%' style={{paddingTop:'80px',paddingLeft:'32px'}} height='100%'>
                         <h2 style={{marginTop:'0'}}>Website Development</h2>
                    <Typography color='textSecondary' style={{textAlign:'justify'}}> In today’s world of technology, it is essential for every business to 
 have a website. A website acts as an excellent online marketing 

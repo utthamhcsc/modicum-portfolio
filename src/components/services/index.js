@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import { Box } from '@material-ui/core'
+import { Box, Fab } from '@material-ui/core'
 import ServiceCard from './ServiceCard'
 
 function Index() {
@@ -30,10 +30,10 @@ function Index() {
         <Box id='service' maxWidth='90%' margin='0 auto'>
         <Grid container spacing={4} justifyContent='center'>
             <Grid item xs={12}>
-                <Box component='h1' textAlign='center' pt={2}>
+                <Box className='section__title' component='h1' textAlign='center' pt={2}>
                     Services
                 </Box>
-                <Box component='h4' color='gray' textAlign='center'>
+                <Box className='section__description' component='h4' color='gray' textAlign='center'>
                 Software Support for all types of buisnesses
                 </Box>
           
@@ -46,6 +46,9 @@ function Index() {
           )}
           
         </Grid>
+        <Box textAlign='center' mt={3}>
+        <Fab variant='extended' size='small' color='primary'>More Services</Fab>            
+        </Box>
         </Box>
     )
 }

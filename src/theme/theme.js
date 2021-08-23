@@ -2,6 +2,16 @@ import { createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({
     "palette": {
+        typography: {
+            fontFamily: 'Montserrat, Arial',
+          },
+          overrides: {
+            MuiCssBaseline: {
+              '@global': {
+                '@font-face': ['Montserrat'],
+              },
+            },
+          },
         "background": {
             "default": "#FFF",
             "emphasis": "#E8EAF6",

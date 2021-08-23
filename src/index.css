@@ -1,6 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 html{
     scroll-behavior: smooth !important;
 }
+*{
+    font-family: Montserrat !important;  
+}
+body{
+    font-family: Montserrat !important;
+}
+.section__description{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+  font-size: 35px !important ;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1a1a18 !important;
+}
+.section__title {
+   
+   margin: 0;
+   padding: 0; 
+   margin-top: 18px;
+    font-size: 65px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: center;
+    color: #292929;
+  }
+
+
+
+
 @keyframes slide {
     0% {
         opacity: 0;
@@ -11,3 +49,20 @@ html{
         transform: none;
     }
 }
+
+/* 
+.modicum:after{
+    position:'absolute';
+    
+    background-color: aliceblue;
+    content:"MODICUM";
+    opacity: 0.07;
+    font-size: 100px;
+    top:0;
+    left:0;
+    right:0;
+    
+   
+    
+    
+} */

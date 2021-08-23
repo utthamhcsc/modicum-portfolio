@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import { Box, Container, Typography } from '@material-ui/core'
+import { Box, Container, Fab, Typography } from '@material-ui/core'
 
 
 function Index() {
@@ -10,11 +10,17 @@ function Index() {
         <Container maxWidth='lg' >
         <Grid container spacing={1} alignItems='stretch'>
             <Grid
+            
+            
               item
               xs={12}
             >
-              <Box textAlign='center'  fontSize='17px' fontWeight='bolder' py='30px'>
+              <Box style={{position:'relative',}}  height='100%' width='100%'>
+              <Box  textAlign='center'   fontSize='35px' fontWeight='bolder' py='30px'>
               Modicum provides one stop automated solution for your trade and industry. Depending on the size and field of your organization, we have different set of services to meet your requirements.
+              </Box>
+              <Box className='modicum' />
+
               </Box>    
             </Grid>
             
@@ -47,29 +53,31 @@ function Index() {
               margin='0 auto'
              
               >
-                  <Box textAlign='center' my='20px' fontSize='20px' component={Typography} variant="h2">
+                  <Box component='h1' fontSize='65px' className='section__title' textAlign='left'm={0} my='20px' >
                       About Us
                   </Box> 
-                  <Typography paragraph color='textSecondary' variant="subtitle2" style={{textAlign:'justify'}}>
+                  <Typography style={{fontSize:'22px'}} paragraph color='textSecondary' variant="subtitle2" style={{textAlign:'justify'}}>
                   We are a small group of young professionals striving hard for the 
 development of the organization. Modicum is a software services firm 
 based in Bangalore. We have extensive experience in many diverse 
 areas of software development.
 </Typography> 
-<Typography paragraph color='textSecondary' variant="subtitle2" style={{textAlign:'justify'}}>
+<Typography paragraph style={{fontSize:'22px'}} color='textSecondary' variant="subtitle2" style={{textAlign:'justify'}}>
 Our staff of professionals will work with a wide array of platforms, 
 languages, and tools in the course of our various projects.We built our 
 solutions by closely learning our potential clientele and their 
 expectations from our product. We know how to analyze this 
 information and customize our offering to changing market needs.
 </Typography>
-<Typography paragraph color='textSecondary' variant="subtitle2" style={{textAlign:'justify'}}>
+<Typography paragraph style={{fontSize:'22px'}} color='textSecondary' variant="subtitle2" style={{textAlign:'justify'}}>
 Modicum Is Focusing exclusively in high quality and cost-effective 
 software development and implementation services.
-</Typography>               
+</Typography>   
+<Fab variant='extended' size='small' color='primary'>Learn More</Fab>            
                   </Box>  
             </Grid>
         </Grid>
+
         </Container>
         </section>
     )

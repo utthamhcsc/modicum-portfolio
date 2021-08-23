@@ -84,7 +84,7 @@ function index() {
     },[index])
     return (
         <>
-        <Box mt={4} component='h1' textAlign='center'>Our 6D Process</Box>
+        <Box mt={4} className='section__title' component='h1' textAlign='center'>Our 6D Process</Box>
         <Box className={classes.root}>
             {content.map((i,d)=><Dcard key={'caerws'+d} data={i} index={d} active={index} classes={classes}/>)}
         

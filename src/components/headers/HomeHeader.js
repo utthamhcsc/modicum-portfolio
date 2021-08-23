@@ -59,12 +59,21 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.background.secondary
   },
   primaryAction: {
-    color:'#ffff',
+    color:'#ffff !important',
     backgroundColor:'rgba(255,255,255,.3)',
     borderRadius:'5px',
     marginRight: theme.spacing(2),
     transition:'all .3s ease-in',
+    '& .MuiInputBase-root':{
+      color:'inherit'
+    },
+    '& *::placeholder':{
+      color:'white'
+    },
     '&:hover':{
+      '& .MuiInputBase-root':{
+        color:'#'
+      },
       color:'#000',
       backgroundColor:'rgba(255,255,255)'
     },
@@ -125,21 +134,21 @@ useEffect(()=>{
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
           <Typography key={heading[index]?.title1}  className={classes.animate} variant="h2" component="h2" gutterBottom={true}>
-            <Typography  variant="h2" component="p">{heading[index]?.title1} </Typography>
-            <Typography  variant="h2" component="p">{heading[index]?.title2} </Typography>
+            <Typography style={{whiteSpace:'nowrap',fontSize:50,fontWeight:'normal'}}  variant="h2" component="p">{heading[index]?.title1} </Typography>
+            <Typography style={{whiteSpace:'nowrap',fontSize:50}}   variant="h2" component="p"><b>{heading[index]?.title2}</b> </Typography>
        </Typography>
-          <Box my={6}/>
+          <Box my={10}/>
           <Container maxWidth="md">
           
-          <Typography variant="h5" paragraph={true} >{content['header-p2']}</Typography>
+          <Typography variant="h5" style={{whiteSpace:'nowrap',fontSize:35}} gutterBottom >{content['header-p2']}</Typography>
           
-            <Typography variant="body" color="textSecondary"  className={classes.description}>{content['description1']}</Typography>
+            <Typography variant="body" color="textSecondary" gutterBottom  className={classes.description}>{content['description1']}</Typography>
             <Typography variant="body" color="textSecondary" paragraph={true} className={classes.description}>{content['description2']}</Typography>
           </Container>
           <Box mt={3}>
-            <TextField InputProps={{endAdornment:
+            <TextField  InputProps={{endAdornment:
               <InputAdornment color='inherit' position="end">
-                <Person color='inherit'/>
+                <Person  color='inherit'/>
               </InputAdornment>
             }}  size='small' placeholder='FullName...' variant='outlined' className={classes.primaryAction}/>
             <TextField size='small'InputProps={{endAdornment:

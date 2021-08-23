@@ -9,10 +9,10 @@ function Index() {
         <Box maxWidth='85%' margin='0 auto'>
         <Grid container spacing={4} alignItems='stretch' justifyContent='center'>
             <Grid item xs={12}>
-                <Box component='h1' textAlign='center'>
+                <Box className='section__title' component='h1' textAlign='center'>
                 Why Choose Us...!
                 </Box>
-                <Box component='h4' color='gray' textAlign='center'>
+                <Box className='section__description' component='h4' color='gray' textAlign='center'>
                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
                 </Box>
           

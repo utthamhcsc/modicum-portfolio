@@ -25,21 +25,22 @@ review:{
 }
     }
 ))
-function TestimonialCard() {
+function TestimonialCard({data={}}) {
      const classes=useStyles();
     return (
         <Paper className={classes.paper} elevation={0}  style={{minHeight:'200px',height:'100%',width:'100%'}}>
-            <ProfileCard classes={classes}/>
+           <ProfileCard data={data} classes={classes}/>
             <Box mx={3} flex='1' >
                     <Box component='h3' className={classes.review}>Client Reviews</Box>
                     <Box display='flex' alignItems='center' justifyContent='space-between'>
-                    <Box p={0}  m={0} component='h3'>Infocus Pvt Ltd</Box>
+                    <Box p={0}  m={0} component='h3'>{data.companyname}</Box>
                         <Box p={0}  m={0}>⭐⭐⭐⭐⭐</Box>
                      </Box>  
                      <Box mt={3} mb={3} component={Divider}/>
                      <Typography style={{padding:'20px'}} color='textSecondary'>
                      
-<strong style={{fontSize:'20px'}}>“</strong>My experience with Modicum Technologies has been amazing during the building of Prototype for couple of my customers. The support exhibited was beyond my expectations & the team with whom I had interaction had lot of patience to get the work done by working without any time constraints.
+<strong style={{fontSize:'20px'}}>“</strong>
+{data.Experience}
 <strong style={{fontSize:'20px'}}>”</strong>
                          </Typography> 
         </Box>
@@ -47,7 +48,7 @@ function TestimonialCard() {
     )
 }
 
-const ProfileCard=({classes})=>{
+const ProfileCard=({classes,data})=>{
   return  <Box 
     zIndex='4'
     width='300px'
@@ -58,14 +59,15 @@ const ProfileCard=({classes})=>{
         <Box boxShadow='1px 1px 3px 0 rgba(60,60,60,.2)' bgcolor='white' position='absolute' top={'20px'} width='300px' padding='20px'>
                 <Box height='200px'
                 
-                style={{backgroundImage:'url(assets/img/home.jpg)',
+                style={{backgroundImage:`url(${data.image?data.image:'assets/img/home.jpg'})`,
                 backgroundPosition:'center',
                 backgroundSize:'100%',
                 objectFit:'contain',
+                objectPosition:'top 50%'
             }}
                 />
-                <Typography variant="h6" color="initial" style={{fontSize:'17px',fontWeight:800,marginTop:'14px'}}>SriHari</Typography>
-                <Typography color="textSecondary" style={{fontSize:'13px',fontWeight:800}}>Founder</Typography>
+                <Typography variant="h6" color="initial" style={{fontSize:'17px',fontWeight:800,marginTop:'14px'}}>{data.clientname}</Typography>
+                <Typography color="textSecondary" style={{fontSize:'13px',fontWeight:800}}>{data.Designation}</Typography>
                 
                 </Box> 
                 
