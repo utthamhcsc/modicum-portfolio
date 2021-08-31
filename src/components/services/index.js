@@ -12,7 +12,7 @@ function Index() {
         title:'Mobile Application Development',
         details:'Modicum Technologies offers various web services with high quality,user friendly,customizable and affordable prices.'},
     {
-        title:'ERP Softwares/ Application Development',
+        title:'ERP Softwares / Application Development',
         details:'Our proficient mobile application developers build excellent mobile application architecture which makes your app living magic.' },
     {
         title:'Desktop Application Development',

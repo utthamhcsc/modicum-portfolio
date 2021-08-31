@@ -25,7 +25,7 @@ function Technologis() {
         subtitle2:'Check out what programming languages, database systems, and platforms we use to complete projects for our tech.'
     }
     return (
-        <Box maxWidth='80%' display='flex' flexDirection='column' alignItems='center' bgcolor='#f5f5f5' margin='0 auto'>
+        <Box maxWidth='80%' pt={10} mt={-10} display='flex' flexDirection='column' alignItems='center' bgcolor='#f5f5f5' margin='0 auto'>
             <Typography className={classes.title} >{content['heading']}</Typography>
             <Typography className={classes.subtitle}>{content['subtitle']}</Typography>
             <Box my={2}/>

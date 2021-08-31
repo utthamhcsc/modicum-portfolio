@@ -32,9 +32,11 @@ const useStyles=makeStyles(theme=>({
 
     },
 
-    bg:{backgroundImage:'var(--light)',transition:'all .3s ease-in-out',
+    bg:{backgroundImage:'var(--dark)',filter:'grayscale(1)',transition:'all .9s ease-in-out',
 '&:hover':{
-    backgroundImage:'var(--dark)'
+    //backgroundImage:'var(--dark)'
+    filter:'grayscale(0)',
+    transform:'scale(.95)'
 }
 }
 }))
